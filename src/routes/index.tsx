@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type MouseEvent } from "react";
 import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Menu, X, GraduationCap, Sparkles, Code2 } from "lucide-react";
+import { Achievements } from "@/components/portfolio/Achievements";
 import { Reveal, Section, Typewriter, Cursor } from "@/components/portfolio/ui";
 
 export const Route = createFileRoute("/")({
@@ -26,7 +27,7 @@ const LINKS = {
 };
 
 const NAV = [
-  ["about", "About"], ["projects", "Projects"], ["skills", "Skills"], ["journey", "Journey"], ["contact", "Contact"],
+  ["about", "About"], ["projects", "Projects"], ["skills", "Skills"], ["journey", "Journey"], ["achievements", "Events"], ["contact", "Contact"],
 ] as const;
 
 const SKILLS = ["Web Development", "HTML", "CSS", "JavaScript", "AI / ML", "Cloud Computing", "Azure (AZ-900)", "Problem Solving"];
@@ -217,8 +218,8 @@ function Skills() {
 const JOURNEY: { title: string; org: string; date: string; text: string }[] = [
   { title: "BTech in Artificial Intelligence & Machine Learning", org: "Your University", date: "Present", text: "Specialising in AI and ML" },
   { title: "Microsoft Learning Classes", org: "Microsoft", date: "Coursework", text: "Azure Fundamentals (AZ-900) and Azure Data Fundamentals (DP-900)" },
-  { title: "Hackathon", org: "Thapar University", date: "Participation", text: "Attended and built alongside other participants" },
-  { title: "Apple Event", org: "Apple", date: "Participation", text: "Took part in an Apple event" },
+  { title: "Hack Helix — 12-Hour Hackathon", org: "Thapar University", date: "Helix 2026", text: "Built an Electricity Theft Detection project with team TheDecoders" },
+  { title: "Supercharge — Apple Development Event", org: "Chitkara University iOS Development Centre", date: "Participation", text: "Explored the Apple ecosystem and iOS development" },
 ];
 
 function Journey() {
@@ -248,7 +249,7 @@ function Contact() {
     { icon: Github, label: "GitHub", href: LINKS.github },
   ];
   return (
-    <Section id="contact" eyebrow="05 — Contact" title={<>Let's build <span className="text-gradient">something.</span></>}>
+    <Section id="contact" eyebrow="06 — Contact" title={<>Let's build <span className="text-gradient">something.</span></>}>
       <Reveal>
         <p className="max-w-xl text-lg text-muted-foreground">Open to internships, freelance projects and collaborations. Drop a message — I'd love to hear from you.</p>
       </Reveal>
@@ -273,7 +274,7 @@ function Index() {
       <Cursor />
       <Nav />
       <main>
-        <Hero /><About /><Projects /><Skills /><Journey /><Contact />
+        <Hero /><About /><Projects /><Skills /><Journey /><Achievements /><Contact />
       </main>
       <footer className="border-t py-8 text-center font-mono text-xs text-muted-foreground">© {new Date().getFullYear()} Aashi · Built with care</footer>
     </div>
