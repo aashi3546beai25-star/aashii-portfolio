@@ -29,7 +29,7 @@ const NAV = [
   ["about", "About"], ["projects", "Projects"], ["skills", "Skills"], ["journey", "Journey"], ["contact", "Contact"],
 ] as const;
 
-const SKILLS = ["React", "JavaScript", "HTML", "CSS", "Python", "Java", "C", "AI / Prompt Engineering"];
+const SKILLS = ["Web Development", "HTML", "CSS", "JavaScript", "AI / ML", "Cloud Computing", "Azure (AZ-900)", "Problem Solving"];
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -72,7 +72,7 @@ function Hero() {
       <div className="relative mx-auto w-full max-w-6xl px-6 pt-24">
         <Reveal>
           <span className="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-xs text-muted-foreground">
-            <span className="h-2 w-2 rounded-full bg-accent" /> Open to internships & freelance
+            <span className="h-2 w-2 rounded-full bg-accent" /> Open to internships · freelance · collaborations
           </span>
         </Reveal>
         <Reveal delay={100}>
@@ -85,7 +85,15 @@ function Hero() {
         </Reveal>
         <Reveal delay={300}>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            A second-year BTech AI/ML student who loves turning ideas into clean, useful web experiences — and exploring where AI can make them smarter.
+            I'm a BTech student specialising in Artificial Intelligence and Machine Learning, passionate about building creative digital experiences and exploring emerging technologies. I enjoy turning ideas into practical projects.
+          </p>
+        </Reveal>
+        <Reveal delay={350}>
+          <p className="mt-8 font-mono text-xs text-muted-foreground">
+            <span className="text-foreground/80">Currently exploring</span>
+            <span className="mx-2 text-primary">·</span>Web Development
+            <span className="mx-2 text-primary">·</span>AI/ML
+            <span className="mx-2 text-primary">·</span>Cloud Computing
           </p>
         </Reveal>
         <Reveal delay={400} className="mt-10 flex flex-wrap gap-4">
@@ -103,9 +111,9 @@ function Hero() {
 
 function About() {
   const cards = [
-    { icon: GraduationCap, title: "BTech, AI & ML", text: "Second-year student building strong foundations in machine learning and computer science." },
-    { icon: Trophy, title: "9.5 CGPA", text: "Consistent academic performance while building projects on the side." },
-    { icon: Sparkles, title: "Product-minded", text: "Interested in building digital products that are genuinely useful to real people." },
+    { icon: GraduationCap, title: "BTech, AI & ML", text: "Specialising in Artificial Intelligence and Machine Learning." },
+    { icon: Sparkles, title: "Emerging tech", text: "Exploring web development, AI and cloud computing — and where they overlap." },
+    { icon: Code2, title: "Ideas into projects", text: "Turning ideas into practical projects, like SweetCrumbbb, a bakery website." },
   ];
   return (
     <Section id="about" eyebrow="01 — About" title={<>Curious mind, <span className="text-gradient">builder's hands.</span></>}>
@@ -146,7 +154,7 @@ function ProjectCard() {
           <p className="font-mono text-xs text-accent">Featured · Live website</p>
           <h3 className="mt-3 text-3xl font-bold md:text-4xl">SweetCrumbbb 🧁</h3>
           <p className="mt-4 text-muted-foreground">
-            A charming website for a home bakery — showcasing treats, telling the brand's story and making it easy for customers to explore the menu and get in touch.
+            A bakery website designed to showcase products and simplify custom cake ordering — so customers can browse the treats and place a bespoke order without the back-and-forth.
           </p>
           <ul className="mt-6 flex flex-wrap gap-2">
             {["HTML", "CSS", "JavaScript", "Netlify"].map((t) => (
