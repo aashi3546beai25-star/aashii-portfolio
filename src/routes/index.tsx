@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type MouseEvent } from "react";
-import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Menu, X, GraduationCap, Sparkles, Code2, Trophy } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Github, Linkedin, Mail, Menu, X, GraduationCap, Sparkles, Code2 } from "lucide-react";
 import { Reveal, Section, Typewriter, Cursor } from "@/components/portfolio/ui";
 
 export const Route = createFileRoute("/")({
@@ -215,7 +215,10 @@ function Skills() {
 
 // ✏️ Add real entries here: { title, org, date, text }
 const JOURNEY: { title: string; org: string; date: string; text: string }[] = [
-  { title: "BTech in Artificial Intelligence & Machine Learning", org: "Your University", date: "Present", text: "Second year · 9.5 CGPA" },
+  { title: "BTech in Artificial Intelligence & Machine Learning", org: "Your University", date: "Present", text: "Specialising in AI and ML" },
+  { title: "Microsoft Learning Classes", org: "Microsoft", date: "Coursework", text: "Azure Fundamentals (AZ-900) and Azure Data Fundamentals (DP-900)" },
+  { title: "Hackathon", org: "Thapar University", date: "Participation", text: "Attended and built alongside other participants" },
+  { title: "Apple Event", org: "Apple", date: "Participation", text: "Took part in an Apple event" },
 ];
 
 function Journey() {
