@@ -6,7 +6,7 @@ export function Reveal({ children, className = "", delay = 0 }: { children: Reac
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add("in"); io.disconnect(); } },
+      ([e]) => { if (e?.isIntersecting) { el.classList.add("in"); io.disconnect(); } },
       { threshold: 0.15 },
     );
     io.observe(el);
@@ -32,7 +32,7 @@ export function Typewriter({ words }: { words: string[] }) {
   const [text, setText] = useState("");
   const [del, setDel] = useState(false);
   useEffect(() => {
-    const word = words[i % words.length];
+    const word = words[i % words.length] ?? "";
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setText(word);
       const t = setTimeout(() => setI((n) => n + 1), 2200);
