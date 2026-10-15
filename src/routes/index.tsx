@@ -20,10 +20,10 @@ export const Route = createFileRoute("/")({
 
 // ✏️ Fill these in with your real links
 const LINKS = {
-  email: "mailto:your.email@example.com",
-  linkedin: "https://www.linkedin.com/in/your-profile",
-  github: "https://github.com/your-username",
-  sweetcrumbRepo: "https://github.com/your-username/sweetcrumbbb",
+  email: "mailto:aashi.g2203@gmail.com",
+  linkedin: "https://www.linkedin.com/in/aashi-aashi-607147397",
+  github: "https://github.com/aashi3546beai25-star",
+  sweetcrumbRepo: "https://github.com/aashi3546beai25-star/aashii-portfolio",
 };
 
 const NAV = [
